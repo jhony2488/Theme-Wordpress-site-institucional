@@ -1,2 +1,2 @@
-# setup-theme-wordpress
-setup for WordPress theme development
+# theme-site-institucional
+theme-site-institucional wordpress
