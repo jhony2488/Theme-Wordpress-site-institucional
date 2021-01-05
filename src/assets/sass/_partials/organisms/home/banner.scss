@@ -16,11 +16,10 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        grid-gap: 20px;
         h2,
         p {
             color: white;
-            line-height: 1.5;
+            line-height: 1.2;
             margin-left: 130px;
         }
         h2 {
@@ -28,7 +27,7 @@
             font-weight: bold;
         }
         p {
-            font-size: size(xxbig);
+            font-size: 28px;
         }
         img {
             max-width: 90%;
@@ -70,6 +69,8 @@
         }
         &__item {
             grid-gap: 18px;
+            padding-left: 16px;
+            padding-right: 16px;
             h2,
             p {
                 margin-left: 5vw;
@@ -123,6 +124,7 @@
                 justify-items: center;
                 padding-left: 0;
                 a {
+                    font-size: size(big);
                     max-width: 100vw;
                 }
             }

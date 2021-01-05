@@ -13,7 +13,7 @@
     &-wrapper {
         @extend %wrapper;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 0.5fr;
         justify-items: center;
         align-items: center;
         min-height: 100px;
@@ -36,18 +36,39 @@
         }
         .nav {
             .control-nav,
-            #control-nav {
+            #control-nav,
+            .control-nav-close {
                 display: none;
             }
-            .line-hamburguer-button {
-                width: 20px;
-                height: 6px;
-                &--half {
-                    width: 10px;
-                    height: 6px;
+            .control-nav {
+                width: 100%;
+            }
+            .control-nav__line {
+                display: grid;
+                justify-items: center;
+                grid-gap: 5px;
+                width: 100%;
+                &-wrapper {
+                    display: grid;
+                    justify-items: end;
+                    grid-gap: 5px;
+                    .line-hamburguer-button {
+                        display: grid;
+                        justify-items: end;
+                        grid-gap: 5px;
+                        width: 22px;
+                        height: 3px;
+                        background-color: white;
+                        cursor: pointer;
+                        &-half {
+                            cursor: pointer;
+                            width: 11px;
+                            height: 3px;
+                            background-color: white;
+                        }
+                    }
                 }
             }
-
             ul {
                 display: flex;
                 li {
@@ -70,33 +91,69 @@
     }
     @include responsive(xxxxsmall, xlarge) {
         &-wrapper {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 8px;
             .header-logo {
-                justify-items: start;
-                padding-left: 4vw;
+                justify-items: right;
+                padding-left: 0;
                 img {
-                    max-width: 100%;
+                    max-width: 90%;
                 }
             }
             .nav {
-                .control-nav,
-                #control-nav {
+                .control-nav {
                     display: block;
                 }
-                ul {
-                    display: flex;
+                #control-nav:checked ~ .control-nav-close {
+                    display: block;
+                }
+                #control-nav:checked ~ .ul {
+                    display: block;
+                }
+                #control-nav:checked ~ .control-nav {
                     display: none;
+                }
+                #control-nav:not(:checked) ~ .control-nav-close {
+                    display: none;
+                }
+                #control-nav:not(:checked) ~ .ul {
+                    display: none;
+                }
+                #control-nav:not(:checked) ~ .control-nav {
+                    display: block;
+                }
+                .control-nav-close {
+                    position: fixed;
+                    top: 4vh;
+                    right: 5.5vh;
+                    z-index: 999;
+                    font-size: 28px;
+                }
+                ul {
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: white;
+                    z-index: 9;
+                    text-align: center;
+                    padding-top: 5vh;
+                    display:grid;
+                    grid-gap: 20px;
                     li {
-                        margin-right: 10px;
+                        margin-right: 0px;
+                        margin-bottom: 10px;
                         a {
                             text-decoration: none;
-                            color: white;
-                            font-size: size(big);
+                            color: black;
+                            font-size: size(xbig);
                             &:hover {
                                 cursor: pointer;
                                 transform: scale(1.5);
                                 transition: all 1.2s;
-                                font-size: size(xbig);
+                                font-size: size(xxbig);
                                 color: $color-secundary;
                             }
                         }
