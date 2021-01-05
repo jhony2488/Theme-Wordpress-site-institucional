@@ -429,6 +429,7 @@ template {
   justify-items: center;
   grid-gap: 5px;
   width: 100%;
+  margin-right: -5px;
 }
 .header-wrapper .nav .control-nav__line-wrapper {
   display: grid;

@@ -9,6 +9,7 @@
             "DOM"
         ],
         "esModuleInterop": true,
+        "outDir": "./src/assets/scripts/js/",
         "allowJs": true,
         "sourceMap": true,
         "strict": true,
