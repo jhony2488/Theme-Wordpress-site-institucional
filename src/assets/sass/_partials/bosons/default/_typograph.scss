@@ -20,10 +20,5 @@ $font-sizes: (
     }
   }
 }
-// Estilizando um átomo
-%buton_config {
-  font-size: size(big);
-}
-button {
-  @extend %buton_config;
-}
+
+

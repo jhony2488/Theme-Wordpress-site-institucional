@@ -1,0 +1,131 @@
+.banner {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(114deg, #250e8a, #00faf7);
+    padding-top: 130px;
+    padding-bottom: 20px;
+    &-wrapper {
+        @extend %default;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__item {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        grid-gap: 20px;
+        h2,
+        p {
+            color: white;
+            line-height: 1.5;
+            margin-left: 130px;
+        }
+        h2 {
+            font-size: size(xxxxxbig);
+            font-weight: bold;
+        }
+        p {
+            font-size: size(xxbig);
+        }
+        img {
+            max-width: 90%;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 1.2s;
+            }
+        }
+        &-button {
+            width: 100%;
+            display: grid;
+            justify-items: start;
+            padding-left: 130px;
+            a {
+                font-size: size(xbig);
+                background-color: $color-secundary;
+                text-transform: uppercase;
+                line-height: 1.5;
+                padding: 13px;
+                padding-left: 36px;
+                padding-right: 36px;
+                text-decoration: none;
+                color: #0e2b8a;
+                font-weight: bold;
+                box-shadow: 10px 15px 47px -1px rgba(0, 0, 0, 0.75);
+                border-radius: 12px;
+                &:hover {
+                    box-shadow: none;
+                    transition: all 0.9s;
+                }
+            }
+        }
+    }
+    @include responsive(xxxxsmall, xlarge) {
+        &-wrapper {
+            grid-template-columns: 1fr;
+            grid-gap: 36px;
+        }
+        &__item {
+            grid-gap: 18px;
+            h2,
+            p {
+                margin-left: 5vw;
+                text-align: center;
+            }
+            h2 {
+                font-size: size(xxxxbig);
+            }
+            p {
+                font-size: size(xbig);
+            }
+            &-button {
+                width: 100%;
+                display: grid;
+                justify-items: start;
+                padding-left: 5vw;
+                a {
+                    font-size: size(xbig);
+                    background-color: $color-secundary;
+                    line-height: 1.5;
+                    padding: 13px;
+                    padding-left: 36px;
+                    padding-right: 36px;
+                    text-decoration: none;
+                    color: #0e2b8a;
+                    font-weight: bold;
+                    box-shadow: 10px 15px 47px -1px rgba(0, 0, 0, 0.75);
+                    border-radius: 12px;
+                    &:hover {
+                        box-shadow: none;
+                        transition: all 0.9s;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(xxxxsmall, xsmall) {
+        &__item {
+            h2,
+            p {
+                margin-left: 0;
+                text-align: center;
+            }
+            h2 {
+                font-size: size(xxbig);
+            }
+            p {
+                font-size: size(big);
+            }
+            &-button {
+                justify-items: center;
+                padding-left: 0;
+                a {
+                    max-width: 100vw;
+                }
+            }
+        }
+    }
+}

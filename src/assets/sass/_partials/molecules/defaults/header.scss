@@ -1,0 +1,108 @@
+.header {
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    position: fixed;
+    z-index: 99;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    &-wrapper {
+        @extend %wrapper;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        min-height: 100px;
+        max-height: 100px;
+        padding: 0;
+        .header-logo {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: start;
+            align-items: center;
+            padding-left: 130px;
+            img {
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: all 1.2s;
+                }
+            }
+        }
+        .nav {
+            .control-nav,
+            #control-nav {
+                display: none;
+            }
+            .line-hamburguer-button {
+                width: 20px;
+                height: 6px;
+                &--half {
+                    width: 10px;
+                    height: 6px;
+                }
+            }
+
+            ul {
+                display: flex;
+                li {
+                    margin-right: 10px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: size(big);
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.5);
+                            transition: all 1.2s;
+                            font-size: size(xbig);
+                            color: $color-secundary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(xxxxsmall, xlarge) {
+        &-wrapper {
+            grid-template-columns: 1fr;
+            .header-logo {
+                justify-items: start;
+                padding-left: 4vw;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .nav {
+                .control-nav,
+                #control-nav {
+                    display: block;
+                }
+                ul {
+                    display: flex;
+                    display: none;
+                    li {
+                        margin-right: 10px;
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            font-size: size(big);
+                            &:hover {
+                                cursor: pointer;
+                                transform: scale(1.5);
+                                transition: all 1.2s;
+                                font-size: size(xbig);
+                                color: $color-secundary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
