@@ -82,7 +82,33 @@ include('./assets/partials/head.php')
             </div>
         </section>
         <section class="depoiments">
-            <div class="depoiments-wrapper"></div>
+            <div class="depoiments-wrapper">
+                <h4>
+                    Depoimentos
+                </h4>
+                <div class="depoiments__box">
+                    <div class="depoiments__box-single">
+                        <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum.</p>
+                        <h5>Jhonata Vinicius</h5>
+                        <img src="./assets/images/home/pngs/profile.jpeg" alt="Jhonats">
+                    </div>
+                    <div class="depoiments__box-single">
+                        <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum.</p>
+                        <h5>Jhonata Vinicius</h5>
+                        <img src="./assets/images/home/pngs/profile.jpeg" alt="Jhonats">
+                    </div>
+                    <div class="depoiments__box-single">
+                        <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum.</p>
+                        <h5>Jhonata Vinicius</h5>
+                        <img src="./assets/images/home/pngs/profile.jpeg" alt="Jhonats">
+                    </div>
+                    <div class="depoiments__box-single">
+                        <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum.</p>
+                        <h5>Jhonata Vinicius</h5>
+                        <img src="./assets/images/home/pngs/profile.jpeg" alt="Jhonats">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <?php

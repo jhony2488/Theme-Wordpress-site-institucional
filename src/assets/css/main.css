@@ -939,7 +939,32 @@ li.slick-active button {
 .depoiments-wrapper {
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr;
+  padding-top: 120px;
+  color: white;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.depoiments-wrapper h4 {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+.depoiments__box p {
+  font-size: 24px;
+}
+.depoiments__box h5 {
+  font-size: 18px;
+}
+.depoiments__box-single {
+  display: grid;
+  justify-items: center;
+  grid-gap: 20px;
+}
+.depoiments__box-single img {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

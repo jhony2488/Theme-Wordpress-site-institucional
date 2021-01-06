@@ -6,6 +6,33 @@
         @extend %wrapper;
         display: grid;
         justify-items: center;
-        grid-template-columns: 1fr 1fr;
+        padding-top: 120px;
+        color: white;
+        text-align: center;
+        padding-left: 80px;
+        padding-right: 80px;
+        h4 {
+            font-size: size(xxxbig);
+            margin-bottom: 40px;
+        }
+    }
+    &__box {
+        p {
+            font-size: size(xbig);
+        }
+        h5 {
+            font-size: size(big);
+        }
+        &-single {
+            display: grid;
+            justify-items: center;
+            grid-gap: 20px;
+            img {
+                width: 90px;
+                height: 90px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+        }
     }
 }
