@@ -1,0 +1,11 @@
+.depoiments {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #250e8a;
+    &-wrapper {
+        @extend %wrapper;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+}

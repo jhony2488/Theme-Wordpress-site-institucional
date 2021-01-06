@@ -12,7 +12,7 @@
         padding-left: 100px;
         padding-right: 100px;
         padding-top: 80px;
-        padding-bottom: 40px;
+        padding-bottom: 80px;
     }
     &__item-content-title {
         width: 70%;
@@ -40,6 +40,53 @@
         p {
             color: white;
             line-height: 1.5;
+        }
+    }
+    &__item-ilustration {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 90%;
+            height: 100%;
+        }
+    }
+    @include responsive(xxxxsmall, xlarge) {
+        &-wrapper {
+            @extend %default;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+        &__item-content-title {
+            width: 100%;
+            height: 200px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            padding-bottom: 20px;
+            background: none;
+            h3 {
+                font-size: size(xxxbig);
+                color: white;
+                line-height: 1;
+                text-align: center;
+            }
+        }
+        &__item-content-paragrafos {
+            width: 100%;
+            display: grid;
+            grid-gap: 30px;
+            padding-bottom: 20px;
+            p {
+                color: white;
+                line-height: 1.5;
+            }
         }
     }
 }

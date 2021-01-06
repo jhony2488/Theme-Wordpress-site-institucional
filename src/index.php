@@ -5,7 +5,7 @@
 include('./assets/partials/head.php')
 ?>
 
-<body>
+<body id="home">
     <?php
     include('./assets/partials/header.php')
     ?>
@@ -80,6 +80,9 @@ include('./assets/partials/head.php')
                     <img src="./assets/images/home/pngs/ilustracao-04.png" alt="ilustração que representa o time">
                 </div>
             </div>
+        </section>
+        <section class="depoiments">
+            <div class="depoiments-wrapper"></div>
         </section>
     </main>
     <?php

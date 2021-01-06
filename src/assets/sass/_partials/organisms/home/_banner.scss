@@ -72,12 +72,12 @@
             grid-gap: 18px;
             padding-left: 16px;
             padding-right: 16px;
-            h2,
+            h1,
             p {
                 margin-left: 0;
                 text-align: center;
             }
-            h2 {
+            h1 {
                 font-size: size(xxxxbig);
             }
             p {
@@ -111,12 +111,13 @@
     }
     @include responsive(xxxxsmall, xsmall) {
         &__item {
-            h2,
+            h1,
             p {
                 margin-left: 0;
+                margin: 0;
                 text-align: center;
             }
-            h2 {
+            h1 {
                 font-size: size(xxbig);
             }
             p {

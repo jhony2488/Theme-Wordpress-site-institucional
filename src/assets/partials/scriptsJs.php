@@ -17,6 +17,7 @@
 <script type="text/javascript" src="./assets/acessibilidade/js/hatemile/implementation/AccessibleCSSImplementation.js"></script>
 <script type="text/javascript" src="./assets/acessibilidade/js/hatemile/implementation/AccessibleEventImplementation.js"></script>
 <script type="text/javascript" src="./assets/acessibilidade/js/hatemile/implementation/AccessibleFormImplementation.js"></script>
+<script async src="./assets/scripts/js/scrool.js"></script>
 <script async src="./assets/scripts/js/slide.js"></script>
 <script async src="./assets/fontawesome/js/all.js"></script>
 <script async src="./assets/scripts/js/acessibilidade.js"></script>

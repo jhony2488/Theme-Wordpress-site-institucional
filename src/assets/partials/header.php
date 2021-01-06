@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
     <div class="header-wrapper">
         <div class="header-logo">
             <img src="./assets/images/home/pngs/logo.png" alt="Logo da empresa">
