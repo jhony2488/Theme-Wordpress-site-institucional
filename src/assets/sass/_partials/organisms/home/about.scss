@@ -1,0 +1,9 @@
+.about {
+    width: 100vw;
+    min-height: 60vh;
+    display: grid;
+    justify-items: center;
+    &-wrapper {
+        @extend %wrapper;
+    }
+}
