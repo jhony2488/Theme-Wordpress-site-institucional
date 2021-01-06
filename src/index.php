@@ -67,12 +67,35 @@
                 </div>
             </div>
         </section>
+        <a href="">
+            <div class="circle"><i class="fas fa-angle-down"></i></div>
+        </a>
+
+        <section class="clientes-slider">
+
+            <div class="center">
+                <div class="slider-container">
+                    <img src="./assets/images/home/pngs/amazon.png" />
+                    <img src="./assets/images/home/pngs/costco.png" />
+                    <img src="./assets/images/home/pngs/dominos.png" />
+                    <img src="./assets/images/home/pngs/uber.png" />
+                    <img src="./assets/images/home/pngs//walmart.png" />
+                    <img src="./assets/images/home/pngs/amazon.png" />
+                    <img src="./assets/images/home/pngs/costco.png" />
+                    <img src="./assets/images/home/pngs/dominos.png" />
+                    <img src="./assets/images/home/pngs/uber.png" />
+                    <img src="./assets/images/home/pngs/walmart.png" />
+                </div>
+            </div>
+            <!--center-->
+        </section>
     </main>
     <footer class="footer">
 
     </footer>
 </body>
 <script src="./assets/scripts/js/jQuery.js"></script>
+<script src="./assets/scripts/js/slick.js"></script>
 <!-- Faz com que seja possível armazenar todos os event listener da página. -->
 <script type="text/javascript" src="./assets/acessibilidade/js/eventlistener.js"></script>
 <!-- Arquivos de idiomas -->
@@ -90,7 +113,9 @@
 <script type="text/javascript" src="./assets/acessibilidade/js/hatemile/implementation/AccessibleCSSImplementation.js"></script>
 <script type="text/javascript" src="./assets/acessibilidade/js/hatemile/implementation/AccessibleEventImplementation.js"></script>
 <script type="text/javascript" src="./assets/acessibilidade/js/hatemile/implementation/AccessibleFormImplementation.js"></script>
-<script async defer src="./assets/fontawesome/js/all.js"></script>
-<script async defer src="./assets/scripts/js/acessibilidade.js"></script>
+<script async src="./assets/scripts/js/slide.js"></script>
+<script async src="./assets/fontawesome/js/all.js"></script>
+<script async src="./assets/scripts/js/acessibilidade.js"></script>
+
 
 </html>

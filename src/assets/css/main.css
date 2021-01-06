@@ -219,7 +219,6 @@ body {
   line-height: 1;
   width: 100vh;
   max-width: 100vw;
-  background-color: black;
 }
 
 ol,
@@ -541,6 +540,89 @@ template {
   }
 }
 
+.circle {
+  position: absolute;
+  left: 50%;
+  margin-top: -20px;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px 0 rgba(37, 15, 139, 0.1);
+  cursor: pointer;
+}
+
+.circle i {
+  position: relative;
+  top: 5px;
+  font-size: 30px;
+  color: #1c4aa6;
+}
+.circle i:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: all 1.2s;
+}
+
+section.clientes-slider {
+  padding: 60px 0;
+}
+
+section.clientes-slider img {
+  padding: 0 20px;
+}
+
+.center {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.slider-container {
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slick-dotted ul {
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.slick-dotted li {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.slick-dotted button:focus {
+  outline: 0;
+}
+
+.slick-dotted li button {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  color: #d8d8d8;
+  border-width: 0;
+  background: #d8d8d8;
+  opacity: 1;
+  cursor: pointer;
+}
+
+li.slick-active button {
+  background: #0c3f8a;
+  color: #0c3f8a;
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
 .main {
   width: 100vw;
   height: 100vh;
@@ -623,7 +705,7 @@ template {
   }
   .banner__item h2,
 .banner__item p {
-    margin-left: 5vw;
+    margin-left: 0;
     text-align: center;
   }
   .banner__item h2 {
@@ -635,8 +717,9 @@ template {
   .banner__item-button {
     width: 100%;
     display: grid;
-    justify-items: start;
-    padding-left: 5vw;
+    justify-items: center;
+    padding-left: 0;
+    margin-bottom: 12px;
   }
   .banner__item-button a {
     font-size: 24px;

@@ -1,21 +1,21 @@
-const gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),
-    minifyCss = require('gulp-clean-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    uglifyJs = require('gulp-uglify'),
-    svgmin = require('gulp-svgmin'),
-    clean = require('gulp-clean'),
-    sass = require('gulp-sass'),
-    htmlmin = require('gulp-htmlmin'),
-    ts = require('gulp-typescript'),
-    concat = require('gulp-concat')
+const gulp = require('gulp')
+const autoprefixer = require('gulp-autoprefixer')
+const clean = require('gulp-clean')
+const minifyCss = require('gulp-clean-css')
+const concat = require('gulp-concat')
+const htmlmin = require('gulp-htmlmin')
+const imagemin = require('gulp-imagemin')
+const sass = require('gulp-sass')
+const svgmin = require('gulp-svgmin')
+const ts = require('gulp-typescript')
+const uglifyJs = require('gulp-uglify')
 
 sass.compiler = require('node-sass')
 
 gulp.task('img', () => {
-    const svgOrigin = ['src/assets/images/**.svg'],
-        directoryProject = 'src/assets/images/**',
-        directoryBuiLd = 'dist/assets/images/'
+    const svgOrigin = ['src/assets/images/**.svg']
+    const directoryProject = 'src/assets/images/**'
+    const directoryBuiLd = 'dist/assets/images/'
 
     gulp.src(svgOrigin).pipe(svgmin()).pipe(gulp.dest(directoryBuiLd))
     return gulp
@@ -24,9 +24,9 @@ gulp.task('img', () => {
         .pipe(gulp.dest(directoryBuiLd))
 })
 gulp.task('sass', () => {
-    const srcScss = ['./src/assets/sass/main.scss'],
-        distCssBuild = './dist/assets/css/',
-        distCssDev = './src/assets/css/'
+    const srcScss = ['./src/assets/sass/main.scss']
+    const distCssBuild = './dist/assets/css/'
+    const distCssDev = './src/assets/css/'
     return gulp
         .src(srcScss)
         .pipe(sass())
@@ -34,9 +34,9 @@ gulp.task('sass', () => {
         .pipe(gulp.dest(distCssDev))
 })
 gulp.task('css', () => {
-    const srcCss = ['src/assets/css/*'],
-        distCssBuild = './dist/assets/css/',
-        distCssDev = './src/assets/css/'
+    const srcCss = ['src/assets/css/*']
+    const distCssBuild = './dist/assets/css/'
+    const distCssDev = './src/assets/css/'
     return gulp
         .src(srcCss)
         .pipe(autoprefixer('last 99 versions'))
@@ -46,18 +46,19 @@ gulp.task('css', () => {
 })
 gulp.task('js', () => {
     const srcJs = [
-            'src/assets/scripts/js/html5Shiv.js',
-            'src/assets/scripts/js/respond.js',
-            'src/assets/scripts/js/jquery.js',
-            'src/assets/scripts/js/selectivizr.js',
-        ],
-        srcJsPolify = [
-            'src/assets/scripts/js/html5Shiv.js',
-            'src/assets/scripts/js/respond.js',
-            'src/assets/scripts/js/selectivizr.js',
-        ],
-        srcJquery = ['src/assets/scripts/js/acessibilidade.js'],
-        distJs = ['dist/assets/scripts/js/']
+        'src/assets/scripts/js/html5Shiv.js',
+        'src/assets/scripts/js/respond.js',
+        'src/assets/scripts/js/jquery.js',
+        'src/assets/scripts/js/selectivizr.js',
+        'src/assets/scripts/js/slick.js',
+    ]
+    const srcJsPolify = [
+        'src/assets/scripts/js/html5Shiv.js',
+        'src/assets/scripts/js/respond.js',
+        'src/assets/scripts/js/selectivizr.js',
+    ]
+    const srcJquery = ['src/assets/scripts/js/acessibilidade.js']
+    const distJs = ['dist/assets/scripts/js/']
     gulp.src(srcJquery).pipe(gulp.dest(distJs))
 
     gulp.src(srcJsPolify)
@@ -67,8 +68,8 @@ gulp.task('js', () => {
     return gulp.src(srcJs).pipe(uglifyJs()).pipe(gulp.dest(distJs))
 })
 gulp.task('ts', () => {
-    const src = ['./src/assets/scripts/typescript/**.ts'],
-        dist = './src/assets/scripts/js/'
+    const src = ['./src/assets/scripts/typescript/**.ts']
+    const dist = './src/assets/scripts/js/'
     return gulp
         .src(src)
         .pipe(
@@ -79,13 +80,13 @@ gulp.task('ts', () => {
         .pipe(gulp.dest(dist))
 })
 gulp.task('php', () => {
-    const src = ['./src/assets/scripts/php/**'],
-        dist = ['./dist/assets/scripts/php/']
+    const src = ['./src/assets/scripts/php/**']
+    const dist = ['./dist/assets/scripts/php/']
     return gulp.src(src).pipe(gulp.dest(dist))
 })
 gulp.task('html', () => {
-    const src = ['./src/*.html'],
-        dist = ['./dist/']
+    const src = ['./src/*.html']
+    const dist = ['./dist/']
     return gulp
         .src(src)
         .pipe(
@@ -96,13 +97,13 @@ gulp.task('html', () => {
         .pipe(gulp.dest(dist))
 })
 gulp.task('pages', () => {
-    const pagesSrc = ['src/*.php'],
-        pagesDist = ['dist/']
+    const pagesSrc = ['src/*.php']
+    const pagesDist = ['dist/']
     return gulp.src(pagesSrc).pipe(gulp.dest(pagesDist))
 })
 gulp.task('partials', () => {
-    const pagesComponentsSrc = ['src/assets/partials/*.php'],
-        pagesComponentsDist = ['dist/assets/partials/']
+    const pagesComponentsSrc = ['src/assets/partials/*.php']
+    const pagesComponentsDist = ['dist/assets/partials/']
     return gulp
         .src(pagesComponentsSrc)
         .pipe(
@@ -118,21 +119,21 @@ gulp.task('partials', () => {
 })
 gulp.task('fontAwesome', () => {
     const directorySrc = [
-            './src/assets/fontawesome/css/*',
-            './src/assets/fontawesome/js/*',
-            './src/assets/fontawesome/metadata/*',
-            './src/assets/fontawesome/sprites/*',
-            './src/assets/fontawesome/svgs/**',
-            './src/assets/fontawesome/webfonts/*',
-        ],
-        directoryDist = [
-            './dist/assets/fontawesome/css/',
-            './dist/assets/fontawesome/js/',
-            './dist/assets/fontawesome/metadata/',
-            './dist/assets/fontawesome/sprites/',
-            './dist/assets/fontawesome/svgs/',
-            './dist/assets/fontawesome/webfonts/',
-        ]
+        './src/assets/fontawesome/css/*',
+        './src/assets/fontawesome/js/*',
+        './src/assets/fontawesome/metadata/*',
+        './src/assets/fontawesome/sprites/*',
+        './src/assets/fontawesome/svgs/**',
+        './src/assets/fontawesome/webfonts/*',
+    ]
+    const directoryDist = [
+        './dist/assets/fontawesome/css/',
+        './dist/assets/fontawesome/js/',
+        './dist/assets/fontawesome/metadata/',
+        './dist/assets/fontawesome/sprites/',
+        './dist/assets/fontawesome/svgs/',
+        './dist/assets/fontawesome/webfonts/',
+    ]
     gulp.src(directorySrc[0])
         .pipe(autoprefixer('last 99 versions'))
         .pipe(minifyCss())
@@ -145,41 +146,41 @@ gulp.task('fontAwesome', () => {
 })
 gulp.task('acessibilidade', () => {
     const src = [
-            './src/assets/acessibilidade/css/*',
-            './src/assets/acessibilidade/coffee/*',
-            './src/assets/acessibilidade/coffee/hatemile/implementation/*',
-            './src/assets/acessibilidade/coffee/hatemile/util/*',
-            './src/assets/acessibilidade/coffee/hatemile/util/html/**',
-            './src/assets/acessibilidade/coffee/hatemile/util/css/**',
-            './src/assets/acessibilidade/js/*',
-            './src/assets/acessibilidade/js/hatemile/*',
-            './src/assets/acessibilidade/js/hatemile/implementation/*',
-            './src/assets/acessibilidade/js/hatemile/util/*',
-            './src/assets/acessibilidade/js/hatemile/util/css/**',
-            './src/assets/acessibilidade/js/hatemile/util/html/**',
-            './src/assets/acessibilidade/_locales/pt_BR/js/*',
-            './src/assets/acessibilidade/_locales/pt_BR/coffee/*',
-            './src/assets/acessibilidade/_locales/en_US/js/*',
-            './src/assets/acessibilidade/_locales/en_US/coffee/*',
-        ],
-        dest = [
-            './dist/assets/acessibilidade/css/',
-            './dist/assets/acessibilidade/coffee/',
-            './dist/assets/acessibilidade/coffee/hatemile/implementation/',
-            './dist/assets/acessibilidade/coffee/hatemile/util/',
-            './dist/assets/acessibilidade/coffee/hatemile/util/html/',
-            './dist/assets/acessibilidade/coffee/hatemile/util/css/',
-            './dist/assets/acessibilidade/js/',
-            './dist/assets/acessibilidade/js/hatemile/',
-            './dist/assets/acessibilidade/js/hatemile/implementation/',
-            './dist/assets/acessibilidade/js/hatemile/util/',
-            './dist/assets/acessibilidade/js/hatemile/util/css/',
-            './dist/assets/acessibilidade/js/hatemile/util/html/',
-            './dist/assets/acessibilidade/_locales/pt_BR/js/',
-            './dist/assets/acessibilidade/_locales/pt_BR/coffee/',
-            './dist/assets/acessibilidade/_locales/en_US/js/',
-            './dist/assets/acessibilidade/_locales/en_US/coffee/',
-        ]
+        './src/assets/acessibilidade/css/*',
+        './src/assets/acessibilidade/coffee/*',
+        './src/assets/acessibilidade/coffee/hatemile/implementation/*',
+        './src/assets/acessibilidade/coffee/hatemile/util/*',
+        './src/assets/acessibilidade/coffee/hatemile/util/html/**',
+        './src/assets/acessibilidade/coffee/hatemile/util/css/**',
+        './src/assets/acessibilidade/js/*',
+        './src/assets/acessibilidade/js/hatemile/*',
+        './src/assets/acessibilidade/js/hatemile/implementation/*',
+        './src/assets/acessibilidade/js/hatemile/util/*',
+        './src/assets/acessibilidade/js/hatemile/util/css/**',
+        './src/assets/acessibilidade/js/hatemile/util/html/**',
+        './src/assets/acessibilidade/_locales/pt_BR/js/*',
+        './src/assets/acessibilidade/_locales/pt_BR/coffee/*',
+        './src/assets/acessibilidade/_locales/en_US/js/*',
+        './src/assets/acessibilidade/_locales/en_US/coffee/*',
+    ]
+    const dest = [
+        './dist/assets/acessibilidade/css/',
+        './dist/assets/acessibilidade/coffee/',
+        './dist/assets/acessibilidade/coffee/hatemile/implementation/',
+        './dist/assets/acessibilidade/coffee/hatemile/util/',
+        './dist/assets/acessibilidade/coffee/hatemile/util/html/',
+        './dist/assets/acessibilidade/coffee/hatemile/util/css/',
+        './dist/assets/acessibilidade/js/',
+        './dist/assets/acessibilidade/js/hatemile/',
+        './dist/assets/acessibilidade/js/hatemile/implementation/',
+        './dist/assets/acessibilidade/js/hatemile/util/',
+        './dist/assets/acessibilidade/js/hatemile/util/css/',
+        './dist/assets/acessibilidade/js/hatemile/util/html/',
+        './dist/assets/acessibilidade/_locales/pt_BR/js/',
+        './dist/assets/acessibilidade/_locales/pt_BR/coffee/',
+        './dist/assets/acessibilidade/_locales/en_US/js/',
+        './dist/assets/acessibilidade/_locales/en_US/coffee/',
+    ]
 
     gulp.src(src[0])
         .pipe(autoprefixer())

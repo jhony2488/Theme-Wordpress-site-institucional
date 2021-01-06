@@ -73,7 +73,7 @@
             padding-right: 16px;
             h2,
             p {
-                margin-left: 5vw;
+                margin-left: 0;
                 text-align: center;
             }
             h2 {
@@ -85,8 +85,9 @@
             &-button {
                 width: 100%;
                 display: grid;
-                justify-items: start;
-                padding-left: 5vw;
+                justify-items: center;
+                padding-left: 0;
+                margin-bottom: 12px;
                 a {
                     font-size: size(xbig);
                     background-color: $color-secundary;
