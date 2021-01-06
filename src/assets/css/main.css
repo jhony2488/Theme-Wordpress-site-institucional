@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
-button {
-  background-color: #1eb7db;
-  color: #0000;
-  border-color: #0000;
-}
-
 @keyframes mymove {
   from {
     top: 0px;
@@ -27,7 +21,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-.banner-wrapper, *,
+.explaning-wrapper, *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -73,13 +67,9 @@ table {
   border-spacing: 0;
 }
 
-.about-wrapper, .header-wrapper {
+.about-wrapper, .banner-wrapper, .header-wrapper {
   max-width: 1500px;
   width: 100%;
-}
-
-button {
-  font-size: 18px;
 }
 
 .force-read-before,
@@ -807,6 +797,51 @@ li.slick-active button {
 .about__item p {
   text-align: center;
   color: #3a3838;
+}
+
+.explaning {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+}
+.explaning-wrapper {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.explaning__item-content-title {
+  width: 70%;
+  height: 200px;
+  display: grid;
+  justify-items: left;
+  align-items: end;
+  padding-bottom: 20px;
+  background-image: url("../images/home/pngs/forma.png");
+  background-position-x: left;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.explaning__item-content-title h3 {
+  font-size: 42px;
+  color: white;
+  line-height: 1;
+}
+.explaning__item-content-paragrafos {
+  width: 90%;
+  display: grid;
+  grid-gap: 30px;
+  padding-bottom: 20px;
+}
+.explaning__item-content-paragrafos p {
+  color: white;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=main.css.map */

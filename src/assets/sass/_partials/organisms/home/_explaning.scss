@@ -1,0 +1,45 @@
+.explaning {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    &-wrapper {
+        @extend %default;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    &__item-content-title {
+        width: 70%;
+        height: 200px;
+        display: grid;
+        justify-items: left;
+        align-items: end;
+        padding-bottom: 20px;
+        background-image: url("../images/home/pngs/forma.png");
+        background-position-x: left;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        h3 {
+            font-size: size(xxxbig);
+            color: white;
+            line-height: 1;
+        }
+    }
+    &__item-content-paragrafos {
+        width: 90%;
+        display: grid;
+        grid-gap: 30px;
+        padding-bottom: 20px;
+        p {
+            color: white;
+            line-height: 1.5;
+        }
+    }
+}

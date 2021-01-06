@@ -69,7 +69,7 @@ include('./assets/partials/head.php')
             <div class="explaning-wrapper">
                 <div class="explaning__item-content">
                     <div class="explaning__item-content-title">
-                        <h3>Um time experiente comunicador e coeso</h3>
+                        <h3>Um time experiente comunicador e coeso.</h3>
                     </div>
                     <div class="explaning__item-content-paragrafos">
                         <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum. Integer volutpat suscipit est vitae bibendum. Duis consectetur nulla vitae neque facilisis fermentum. Donec efficitur congue arcu, viverra luctus nibh. Etiam convallis ligula vitae velit eleifend sollicitudin. Donec ultricies ipsum eu euismod aliquam. Vestibulum non mi libero.</p>
