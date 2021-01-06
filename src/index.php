@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Setup Theme Wordpress</title>
-    <!-- Esconde as mudanças visuais da biblioteca de acessibilidade. -->
-    <!--[if lt IE 9]>
-            <script src="./assets/scripts/js/jQuery.js"></script>
-            <script async defer src="./assets/scripts/js/allPolify.js"></script>
-        <![endif]-->
-    <!--[if (gte IE 6)&(lte IE 8)]>
-            <script src="./assets/scripts/js/jQuery.js"></script>
-            <script async defer src="./assets/scripts/js/allPolify.js"></script>
-        <![endif]-->
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" media="print" onload="this.media='all'" />
-    <link href="./assets/fontawesome/css/all.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" />
-</head>
+<?php
+include('./assets/partials/head.php')
+?>
 
 <body>
     <?php
@@ -60,7 +47,39 @@
             <!--center-->
         </section>
         <section class="about">
-
+            <div class="about-wrapper">
+                <div class="about__item">
+                    <img src="./assets/images/home/pngs/ilustracao-01.png" alt="">
+                    <h2>Ambientes Mobile</h2>
+                    <p>Garanta que toda a sua comunicação esteja ainhada com o seu proposito, cada palavra conta</p>
+                </div>
+                <div class="about__item">
+                    <img src="./assets/images/home/pngs/ilustracao-02.png" alt="">
+                    <h2>Sites e Intranets</h2>
+                    <p>Um dialogo so acontece quando ambas as partes escutam e falam, garanta que seu publico te entenda</p>
+                </div>
+                <div class="about__item">
+                    <img src="./assets/images/home/pngs/ilustracao-03.png" alt="">
+                    <h2>Comunicação one-to-one</h2>
+                    <p>O digital veio para ficar, sem duvidas,mas uma comunicação, mas uma comunicação integrada de verdade, exige clareza nas decisões </p>
+                </div>
+            </div>
+        </section>
+        <section class="explaning">
+            <div class="explaning-wrapper">
+                <div class="explaning__item-content">
+                    <div class="explaning__item-content-title">
+                        <h3>Um time experiente comunicador e coeso</h3>
+                    </div>
+                    <div class="explaning__item-content-paragrafos">
+                        <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum. Integer volutpat suscipit est vitae bibendum. Duis consectetur nulla vitae neque facilisis fermentum. Donec efficitur congue arcu, viverra luctus nibh. Etiam convallis ligula vitae velit eleifend sollicitudin. Donec ultricies ipsum eu euismod aliquam. Vestibulum non mi libero.</p>
+                        <p>Vestibulum facilisis posuere ante ac dictum. Integer molestie malesuada felis, ac luctus orci euismod at. Ut quis eros ac quam vulputate condimentum. Integer volutpat suscipit est vitae bibendum. Duis consectetur nulla vitae neque facilisis fermentum. Donec efficitur congue arcu, viverra luctus nibh. Etiam convallis ligula vitae velit eleifend sollicitudin. Donec ultricies ipsum eu euismod aliquam. Vestibulum non mi libero.</p>
+                    </div>
+                </div>
+                <div class="explaning__item-ilustration">
+                    <img src="./assets/images/home/pngs/ilustracao-04.png" alt="ilustração que representa o time">
+                </div>
+            </div>
         </section>
     </main>
     <?php
