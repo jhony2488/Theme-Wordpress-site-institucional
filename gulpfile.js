@@ -53,7 +53,7 @@ gulp.task('js', () => {
         'src/assets/scripts/js/slick.js',
     ]
     const srcJsPolify = [
-        'src/assets/scripts/js/html5Shiv.js',
+        'src/assets/scripts/js/html5shiv.js',
         'src/assets/scripts/js/respond.js',
         'src/assets/scripts/js/selectivizr.js',
     ]

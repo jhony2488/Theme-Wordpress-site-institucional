@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -2014,6 +2015,7 @@
         (b.prototype.updateArrows = function () {
             let b
             const a = this
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             ;(b = Math.floor(a.options.slidesToShow / 2)),
                 a.options.arrows === !0 &&
                     a.slideCount > a.options.slidesToShow &&
