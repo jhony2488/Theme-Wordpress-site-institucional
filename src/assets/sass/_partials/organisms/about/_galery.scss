@@ -1,0 +1,82 @@
+.about-galery {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    &-wrapper {
+        @extend %wrapper;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 120px;
+        min-height: 100vh;
+    }
+    &__items {
+        width: 85%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 120px;
+        background-color: white;
+        box-shadow: 2px 11px 56px 3px rgba(0, 0, 0, 0.52);
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    @include responsive(xxxxsmall, small) {
+        &-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 30px;
+            padding-bottom: 120px;
+            min-height: 100vh;
+        }
+        &__items {
+            width: 95%;
+            grid-template-columns: 1fr;
+            padding-top: 30px;
+            padding-bottom: 120px;
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+    @include responsive(small, xlarge) {
+        &-wrapper {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 30px;
+            padding-bottom: 120px;
+            min-height: 100vh;
+            padding-bottom: 120px;
+        }
+        &__items {
+            width: 95%;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            align-items: center;
+            grid-gap: 20px;
+            padding-top: 30px;
+            padding-bottom: 120px;
+            background-color: white;
+            box-shadow: 2px 11px 56px 3px rgba(0, 0, 0, 0.52);
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -67,7 +67,7 @@ table {
   border-spacing: 0;
 }
 
-.methodology-wrapper, .depoiments-wrapper, .about-wrapper, .banner-wrapper, .footer-wrapper, .header-wrapper {
+.about-galery-wrapper, .about-page-wrapper, .methodology-wrapper, .depoiments-wrapper, .about-wrapper, .banner-wrapper, .footer-wrapper, .header-wrapper {
   max-width: 1500px;
   width: 100%;
 }
@@ -460,9 +460,6 @@ template {
   color: #fccc42;
 }
 @media (min-width: 300px) and (max-width: 1320px) {
-  .header {
-    background: #0e448a5e;
-  }
   .header-wrapper {
     grid-template-columns: 1.4fr 1fr;
     padding-top: 8px;
@@ -1210,6 +1207,170 @@ li.slick-active button {
 @media (min-width: 300px) and (max-width: 640px) {
   .methodology {
     margin-top: 1vh !important;
+  }
+}
+
+.about-page {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+}
+.about-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 140px;
+}
+.about-page__content {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 30px;
+}
+.about-page__content h1 {
+  font-size: 42px;
+}
+.about-page__image {
+  width: 80%;
+  padding-top: 60px;
+}
+.about-page__image img {
+  width: 100%;
+}
+@media (min-width: 300px) and (max-width: 640px) {
+  .about-page-wrapper {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+  }
+  .about-page__content h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .about-page__content p {
+    text-align: center;
+  }
+  .about-page__image {
+    width: 100%;
+    padding-top: 0px;
+    margin-top: -16px;
+  }
+  .about-page__image img {
+    width: 100%;
+    border-radius: 10%;
+  }
+}
+@media (min-width: 641px) and (max-width: 1320px) {
+  .about-page {
+    min-height: 80vh;
+  }
+  .about-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 100px;
+  }
+  .about-page__content {
+    width: 100%;
+    min-height: 60vh;
+    padding-top: 30px;
+  }
+  .about-page__content h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .about-page__content p {
+    text-align: center;
+  }
+  .about-page__image {
+    display: none;
+  }
+}
+
+.about-galery {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+}
+.about-galery-wrapper {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 120px;
+  min-height: 100vh;
+}
+.about-galery__items {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 120px;
+  background-color: white;
+  box-shadow: 2px 11px 56px 3px rgba(0, 0, 0, 0.52);
+}
+.about-galery__items img {
+  max-width: 100%;
+  width: 100%;
+}
+@media (min-width: 300px) and (max-width: 640px) {
+  .about-galery-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 120px;
+    min-height: 100vh;
+  }
+  .about-galery__items {
+    width: 95%;
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    padding-bottom: 120px;
+  }
+  .about-galery__items img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 641px) and (max-width: 1320px) {
+  .about-galery-wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 120px;
+    min-height: 100vh;
+    padding-bottom: 120px;
+  }
+  .about-galery__items {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 120px;
+    background-color: white;
+    box-shadow: 2px 11px 56px 3px rgba(0, 0, 0, 0.52);
+  }
+  .about-galery__items img {
+    max-width: 100%;
   }
 }
 

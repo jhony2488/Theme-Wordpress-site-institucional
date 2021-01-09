@@ -10,7 +10,9 @@ include('./assets/partials/head.php')
     include('./assets/partials/header.php')
     ?>
     <main class="main">
-
+        <?php
+        include('./assets/partials/methodology.php')
+        ?>
     </main>
     <?php
     include('./assets/partials/footer.php')

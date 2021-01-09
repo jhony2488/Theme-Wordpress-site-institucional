@@ -92,7 +92,6 @@
         }
     }
     @include responsive(xxxxsmall, xlarge) {
-        background: #0e448a5e;
         &-wrapper {
             grid-template-columns: 1.4fr 1fr;
             padding-top: 8px;
