@@ -1,4 +1,4 @@
-$('section.clientes-slider .slider-container').slick({
+$('.clientes-slider .slider-container').slick({
     dots: true,
     arrows: false,
     infinite: false,
@@ -17,8 +17,7 @@ $('section.clientes-slider .slider-container').slick({
         },
     ],
 })
-
-$('section.depoimentos .depoimentos-box').slick({
+$('.depoiments .depoiments-wrapper .depoiments__box').slick({
     dots: true,
     arrows: false,
     infinite: true,
@@ -26,3 +25,8 @@ $('section.depoimentos .depoimentos-box').slick({
     slidesToShow: 1,
     centerMode: false,
 })
+/*
+$('.depoiments-wrapper .depoiments__box').slick({
+   
+})
+*/

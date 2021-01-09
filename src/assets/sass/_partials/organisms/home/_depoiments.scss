@@ -1,6 +1,6 @@
 .depoiments {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: #250e8a;
     &-wrapper {
         @extend %wrapper;
@@ -17,21 +17,26 @@
         }
     }
     &__box {
+        overflow: hidden;
+        width: 100%;
+        max-width: 800px;
         p {
-            font-size: size(xbig);
+            font-size: size(xxbig);
         }
         h5 {
-            font-size: size(big);
+            font-size: size(xbig);
+            margin: 20px auto;
+            text-align: center;
         }
         &-single {
-            display: grid;
-            justify-items: center;
-            grid-gap: 20px;
+            display: inline-block;
             img {
                 width: 90px;
                 height: 90px;
                 border-radius: 100%;
                 cursor: pointer;
+                margin: 10px auto;
+                @extend %hover-image-pattern;
             }
         }
     }

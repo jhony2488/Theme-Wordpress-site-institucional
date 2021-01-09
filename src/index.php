@@ -110,10 +110,14 @@ include('./assets/partials/head.php')
                 </div>
             </div>
         </section>
+        <?php
+        include('./assets/partials/methodology.php')
+        ?>
     </main>
     <?php
     include('./assets/partials/footer.php')
     ?>
+    
 </body>
 <?php
 include('./assets/partials/scriptsJs.php')
