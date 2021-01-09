@@ -40,4 +40,48 @@
             }
         }
     }
+    @include responsive(xxxxsmall, xlarge) {
+        min-height: 130vh;
+        &-wrapper {
+            @extend %wrapper;
+            display: grid;
+            justify-items: center;
+            padding-top: 120px;
+            color: white;
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            h4 {
+                font-size: size(xxxbig);
+                margin-bottom: 40px;
+            }
+        }
+        &__box {
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            p {
+                font-size: size(xxbig);
+            }
+            h5 {
+                font-size: size(xbig);
+                margin: 20px auto;
+                text-align: center;
+            }
+            &-single {
+                display: inline-block;
+                img {
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    margin: 10px auto;
+                    @extend %hover-image-pattern;
+                }
+            }
+        }
+    }
+    @include responsive(xxxxsmall, small) {
+       padding-bottom: 50px;
+    }
 }

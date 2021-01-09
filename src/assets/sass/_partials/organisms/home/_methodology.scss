@@ -10,7 +10,7 @@
     }
     &__box {
         position: relative;
-        z-index: 99;
+        z-index: 7;
         width: 100%;
         max-width: 800px;
         background-color: white;
@@ -57,5 +57,45 @@
                 @extend %hover-image-pattern;
             }
         }
+    }
+    @include responsive(xxxxsmall, xlarge) {
+        &__box {
+            height: 50vh;
+            min-height: 50vh;
+            max-height: 50vh;
+            text-align: center;
+            border-top: $color-secundary 6px solid;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-shadow: 2px 11px 56px 3px rgba(0, 0, 0, 0.52);
+            cursor: pointer;
+            &-items {
+                h6 {
+                    font-size: size(xbig);
+                    font-weight: 500;
+                }
+                p {
+                    font-size: size(medium);
+                    font-weight: 500;
+                    color: rgb(82, 76, 76);
+                }
+                a {
+                    background-color: $color-primary;
+                    padding: 12px;
+                    width: 210px;
+                    font-size: size(big);
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 500;
+                    @extend %hover-image-pattern;
+                }
+            }
+        }
+    }
+    @include responsive(xxxxsmall, small) {
+        margin-top: 1vh !important;
     }
 }

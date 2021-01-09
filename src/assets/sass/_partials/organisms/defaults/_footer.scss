@@ -52,4 +52,47 @@
             }
         }
     }
+    @include responsive(xxxxsmall, xlarge) {
+        width: 100%;
+        min-height: 80vh;
+        margin-top: -58vh;
+        padding-top: 35vh;
+        padding-bottom: 50px;
+        &__links {
+            width: 100%;
+            max-width: 800px;
+            grid-template-columns: 1fr;
+            margin-top: 30px;
+            text-align: center;
+            grid-gap: 30px;
+            &-item {
+                display: grid;
+                grid-gap: 20px;
+                h6 {
+                    font-size: size(xbig);
+                }
+                a {
+                    text-decoration: none;
+                    color: rgb(100, 95, 95);
+                    @extend %hover-image-pattern;
+                }
+            }
+        }
+        &__copyright {
+            width: 100%;
+            text-align: center;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            margin-top: 50px;
+            p {
+                font-size: size(big);
+                a {
+                    color: $color-primary;
+                    text-decoration: none;
+                    @extend %hover-image-pattern;
+                }
+            }
+        }
+    }
 }
