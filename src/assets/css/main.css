@@ -67,12 +67,12 @@ table {
   border-spacing: 0;
 }
 
-.about-galery-wrapper, .about-page-wrapper, .methodology-wrapper, .depoiments-wrapper, .about-wrapper, .banner-wrapper, .footer-wrapper, .header-wrapper {
+.contact-wrapper, .about-galery-wrapper, .about-page-wrapper, .methodology-wrapper, .depoiments-wrapper, .about-wrapper, .banner-wrapper, .footer-wrapper, .header-wrapper {
   max-width: 1500px;
   width: 100%;
 }
 
-.methodology__box-items a:hover, .depoiments__box-single img:hover, .footer__copyright p a:hover, .footer__links-item a:hover, .footer-wrapper img:hover {
+.contact__form form button:hover, .methodology__box-items a:hover, .depoiments__box-single img:hover, .footer__copyright p a:hover, .footer__links-item a:hover, .footer-wrapper img:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all 1.2s;
@@ -714,6 +714,12 @@ li.slick-active button {
     color: #214a81;
     text-decoration: none;
   }
+}
+
+#contact .footer {
+  margin-top: -12vh;
+  padding-top: 10vh;
+  min-height: 50vh;
 }
 
 .banner {
@@ -1371,6 +1377,90 @@ li.slick-active button {
   }
   .about-galery__items img {
     max-width: 100%;
+  }
+}
+
+.contact {
+  padding-top: 120px;
+  width: 100%;
+  display: grid;
+  margin-bottom: 60px;
+}
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.contact__content {
+  width: 60%;
+  display: grid;
+}
+.contact__content h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+.contact__content img {
+  width: 100%;
+}
+.contact__content-info {
+  display: grid;
+  grid-gap: 10px;
+  margin-bottom: 12px;
+}
+.contact__content-info p {
+  font-size: 18px;
+  max-width: 60%;
+}
+.contact__content-info p span {
+  font-weight: bold;
+}
+.contact__form {
+  width: 80%;
+  padding-top: 40px;
+}
+.contact__form form {
+  display: grid;
+  grid-gap: 12px;
+  justify-items: center;
+}
+.contact__form form input,
+.contact__form form select,
+.contact__form form textarea {
+  width: 100%;
+  border-radius: 6px;
+  padding-left: 14px;
+  border: 1px solid black;
+}
+.contact__form form input,
+.contact__form form select {
+  height: 40px;
+}
+.contact__form form textarea {
+  padding-top: 12px;
+}
+.contact__form form button {
+  background-color: #214a81;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+@media (min-width: 300px) and (max-width: 1320px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .contact__content {
+    width: 90%;
+    text-align: center;
+  }
+  .contact__content-info {
+    text-align: center;
+  }
+  .contact__content-info p {
+    max-width: 90%;
+  }
+  .contact__form {
+    width: 90%;
   }
 }
 

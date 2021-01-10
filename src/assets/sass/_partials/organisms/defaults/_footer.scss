@@ -2,7 +2,6 @@
     width: 100%;
     min-height: 80vh;
     background-color: white;
-
     margin-top: -58vh;
     padding-top: 35vh;
     &-wrapper {
@@ -94,5 +93,13 @@
                 }
             }
         }
+    }
+}
+
+#contact {
+    .footer {
+        margin-top: -12vh;
+        padding-top: 10vh;
+        min-height: 50vh;
     }
 }

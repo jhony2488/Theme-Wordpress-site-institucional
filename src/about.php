@@ -5,7 +5,7 @@
 include('./assets/partials/head.php')
 ?>
 
-<body>
+<body id="about">
     <?php
     include('./assets/partials/header.php')
     ?>

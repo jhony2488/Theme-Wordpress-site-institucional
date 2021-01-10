@@ -1,0 +1,85 @@
+.contact {
+    padding-top: 120px;
+    width: 100%;
+    display: grid;
+    margin-bottom: 60px;
+    &-wrapper {
+        @extend %wrapper;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    &__content {
+        width: 60%;
+        display: grid;
+        h1 {
+            font-size: size(xxxbig);
+            font-weight: bold;
+        }
+        img {
+            width: 100%;
+        }
+        &-info {
+            display: grid;
+            grid-gap: 10px;
+            margin-bottom: 12px;
+            p {
+                font-size: size(big);
+                max-width: 60%;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__form {
+        width: 80%;
+        padding-top: 40px;
+        form {
+            display: grid;
+            grid-gap: 12px;
+            justify-items: center;
+            input,
+            select,
+            textarea {
+                width: 100%;
+                border-radius: 6px;
+                padding-left: 14px;
+                border: 1px solid black;
+            }
+            input,
+            select {
+                height: 40px;
+            }
+            textarea {
+                padding-top: 12px;
+            }
+            button {
+                background-color: $color-primary;
+                color: white;
+                font-size: size(xbig);
+                font-weight: bold;
+                padding: 10px 20px;
+                @extend %hover-image-pattern;
+            }
+        }
+    }
+    @include responsive(xxxxsmall, xlarge) {
+        &-wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__content {
+            width: 90%;
+            text-align: center;
+            &-info {
+                text-align: center;
+                p {
+                    max-width: 90%;
+                }
+            }
+        }
+        &__form {
+            width: 90%;
+        }
+    }
+}
