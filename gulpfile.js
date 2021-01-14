@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin')
 const sass = require('gulp-sass')
 const svgmin = require('gulp-svgmin')
 const ts = require('gulp-typescript')
-const uglifyJs = require('gulp-uglify')
+const uglifyJs = require('gulp-uglify-es').default
 
 sass.compiler = require('node-sass')
 
@@ -23,19 +23,9 @@ gulp.task('img', () => {
         .pipe(imagemin())
         .pipe(gulp.dest(directoryBuiLd))
 })
-gulp.task('sass', () => {
-    const srcScss = ['./src/assets/sass/main.scss']
-    const distCssBuild = './dist/assets/css/'
-    const distCssDev = './src/assets/css/'
-    return gulp
-        .src(srcScss)
-        .pipe(sass())
-        .pipe(gulp.dest(distCssBuild))
-        .pipe(gulp.dest(distCssDev))
-})
 gulp.task('css', () => {
     const srcCss = ['src/assets/css/*']
-    const distCssBuild = './dist/assets/css/'
+    const distCssBuild = './dist/'
     const distCssDev = './src/assets/css/'
     return gulp
         .src(srcCss)
@@ -46,19 +36,21 @@ gulp.task('css', () => {
 })
 gulp.task('js', () => {
     const srcJs = [
-        'src/assets/scripts/js/html5Shiv.js',
-        'src/assets/scripts/js/respond.js',
-        'src/assets/scripts/js/jquery.js',
-        'src/assets/scripts/js/selectivizr.js',
-        'src/assets/scripts/js/slick.js',
+        './src/assets/scripts/js/jquery.js',
+        './src/assets/scripts/js/slick.js',
     ]
     const srcJsPolify = [
-        'src/assets/scripts/js/html5shiv.js',
-        'src/assets/scripts/js/respond.js',
-        'src/assets/scripts/js/selectivizr.js',
+        './src/assets/scripts/js/html5shiv.js',
+        './src/assets/scripts/js/respond.js',
+        './src/assets/scripts/js/selectivizr.js',
     ]
-    const srcJquery = ['src/assets/scripts/js/acessibilidade.js']
-    const distJs = ['dist/assets/scripts/js/']
+    const srcJquery = [
+        './src/assets/scripts/js/acessibilidade.js',
+        './src/assets/scripts/js/scrool.js',
+        './src/assets/scripts/js/slick.js',
+        './src/assets/scripts/js/slide.js',
+    ]
+    const distJs = ['./dist/assets/scripts/js/']
     gulp.src(srcJquery).pipe(gulp.dest(distJs))
 
     gulp.src(srcJsPolify)
@@ -66,6 +58,14 @@ gulp.task('js', () => {
         .pipe(gulp.dest(distJs))
         .pipe(gulp.dest('./src/assets/scripts/js/'))
     return gulp.src(srcJs).pipe(uglifyJs()).pipe(gulp.dest(distJs))
+})
+gulp.task('polifys', () => {
+    const distJs = ['./dist/assets/scripts/js/']
+    return gulp
+        .src('./src/assets/scripts/js/allPolify.js')
+        .pipe(uglifyJs())
+        .pipe(gulp.dest(distJs))
+        .pipe(gulp.dest('./src/assets/scripts/js/'))
 })
 gulp.task('ts', () => {
     const src = ['./src/assets/scripts/typescript/**.ts']
@@ -217,7 +217,6 @@ gulp.task(
         'fontAwesome',
         'acessibilidade',
         'img',
-        'sass',
         'css',
         'ts',
         'js',
@@ -242,7 +241,6 @@ gulp.task('default', () => {
             'fontAwesome',
             'acessibilidade',
             'img',
-            'sass',
             'css',
             'ts',
             'js',
